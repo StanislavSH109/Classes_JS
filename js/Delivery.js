@@ -19,7 +19,5 @@ export default class Delivery {
         this.createTitleDiv = document.createElement('div');
         this.createTitleDiv.classList.add('card__title');
 
-
-
     }
 }
