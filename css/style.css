@@ -1,0 +1,7 @@
+/* GLOBAL */
+@import 'global/reboot.css';
+@import 'global/normalize.css';
+
+/* BLOCKS */
+
+@import 'block/card.css';
