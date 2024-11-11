@@ -1,2 +1,2 @@
-# Classes_JS
-Create Cards with classes and modules
+# Classes JS
+Create Cards for delivery with classes and modules
