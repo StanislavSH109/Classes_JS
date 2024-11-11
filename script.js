@@ -13,9 +13,20 @@ class Delivery {
         
         return divElement;
     }
+
+    createTitle(titleName, titleAdress, titleDistance) {
+        const getCard = document.querySelector('.card');
+        const createTitleDiv = document.createElement('div');
+        getCard.append(createTitleDiv);
+
+        const tagP = document.createElement('p');
+        tagP.textContent = this.name;
+        createTitleDiv.append(tagP);
+    }
 }
 
 const card1 = new Delivery('Ольга', 'ул. Вымыслов, д.12', 8);
+card1.createTitle('Имя:', 'Адрес:', 'Расстояние:');
 card1.getCard();
 
 const card2 = new Delivery('Ольга', 'ул. Вымыслов, д.12', 8);
