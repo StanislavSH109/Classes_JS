@@ -1,7 +1,17 @@
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     height: 250px;
     width: 300px;
     background-color: aliceblue;
     border-radius: 8px;
+}
+
+.card__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
