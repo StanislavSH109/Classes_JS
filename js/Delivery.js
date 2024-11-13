@@ -10,9 +10,9 @@ export default class Delivery {
         this.divElement = document.createElement('div');
         this.divElement.classList.add('card');
         
-        this.addTitleName = this.createTitle('Имя:')
-        this.addTitleAdress = this.createTitle('Адрес:');
-        this.addTitleDistance = this.createTitle('Расстояние:');
+        this.addTitleName = this.createTitle('Имя:', 'card__title-name')
+        this.addTitleAddress = this.createTitle('Адрес:', 'card__title-address');
+        this.addTitleDistance = this.createTitle('Расстояние:', 'card__title-distance');
         
         this.sectionElement.append(this.divElement);
         this.divElement.append(this.addTitleName, this.addTitleAdress, this.addTitleDistance);
@@ -20,10 +20,10 @@ export default class Delivery {
         return this.divElement;
     }
 
-    createTitle(titleName) {
+    createTitle(titleName, classAdd) {
         this.getCard = document.querySelector('.card');
         this.createTitleDiv = document.createElement('div');
-        this.createTitleDiv.classList.add('card__title');
+        this.createTitleDiv.classList.add('card__title', classAdd);
         this.createTitleH2 = document.createElement('h2');
         this.createTitleH2.textContent = titleName;
 
@@ -32,8 +32,15 @@ export default class Delivery {
         return this.createTitleDiv;
     }
 
+    
     // set titleName(name) {
-    //     this.addTitleName = this.createTitle('Имя:', this.name);
+    //     this.titleDiv = document.querySelector('.card__title-name');
+        
+    //     return this.titleDiv;
+    // }
+
+    // get titleName() {
+    //     return this.titleDiv;
     // }
 
     set positionText(value) {
@@ -47,3 +54,4 @@ export default class Delivery {
         return this.createTitleDiv.style.alignItems;
     }
 }
+
