@@ -3,7 +3,8 @@ import Delivery from "./Delivery.js";
 const card1 = new Delivery('Ольга', 'ул. Вымыслов, д.12', 8);
 card1.getCard();
 card1.positionText = 'flex-start';
-console.log(card1.titleName);
+card1.titleName = 'Ольга';
+
 
 const card2 = new Delivery('Ольга', 'ул. Вымыслов, д.12', 8);
 card2.getCard();

@@ -32,16 +32,30 @@ export default class Delivery {
         return this.createTitleDiv;
     }
 
-    
-    // set titleName(name) {
-    //     this.titleDiv = document.querySelector('.card__title-name');
-        
-    //     return this.titleDiv;
-    // }
+    createText() {
+        this.titleDiv = document.querySelector('.card__title-name');
 
-    // get titleName() {
-    //     return this.titleDiv;
-    // }
+        if(this.titleDiv.getElementsByTagName('p').length === 0){
+            this.titleText = document.createElement('p');
+            this.titleDiv.append(this.titleText);
+            return this.titleDiv;
+        } else {
+            return this.titleDiv;
+        }
+    }
+
+    set titleName(name) {
+        if(this.createText())  {
+            this.titleDiv.getElementsByTagName('p').textContent = name;
+            
+        } else {
+            console.log('Error');
+        }
+    }
+
+    get titleName() {
+        return this.titleDiv;
+    }
 
     set positionText(value) {
         this.createTitleDivAll = document.querySelectorAll('.card__title');
