@@ -15,7 +15,7 @@ export default class Delivery {
         this.addTitleDistance = this.createTitle('Расстояние:', 'card__title-distance');
         
         this.sectionElement.append(this.divElement);
-        this.divElement.append(this.addTitleName, this.addTitleAdress, this.addTitleDistance);
+        this.divElement.append(this.addTitleName, this.addTitleAddress, this.addTitleDistance);
         
         return this.divElement;
     }
