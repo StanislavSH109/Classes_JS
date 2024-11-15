@@ -13,25 +13,31 @@ export default class Delivery {
         this.nameElement = document.createElement('h2');
         this.textElement = document.createElement('p');
         this.nameElement.textContent = 'Имя';
+        this.textElement.textContent = `${this.name}`
         this.divElement.append(this.nameElement);
-        this.divElement.append(this.textElement.textContent = `${this.name}`);
+        this.divElement.append(this.textElement);
        
         this.nameElement = document.createElement('h2');
         this.textElement = document.createElement('p');
-        this.nameElement.textContent = 'Адрес:';
+        this.nameElement.textContent = 'Адрес';
+        this.textElement.textContent = `${this.adress}`
         this.divElement.append(this.nameElement);
-        this.divElement.append(this.textElement.textContent = `${this.adress}`);
+        this.divElement.append(this.textElement);
        
         this.nameElement = document.createElement('h2');
         this.textElement = document.createElement('p');
         this.nameElement.textContent = 'Расстояние';
+        this.textElement.textContent = `${this.distance} км.`
         this.divElement.append(this.nameElement);
-        this.divElement.append(this.textElement.textContent = `${this.distance} км.`);
+        this.divElement.append(this.textElement);
 
 
         this.sectionElement.append(this.divElement);
         return this.divElement;
     }
 
+    // set align(option) {
+
+    // }
 }
 
