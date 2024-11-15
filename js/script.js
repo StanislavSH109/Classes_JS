@@ -10,3 +10,4 @@ deliveryArray.forEach(delivery => {
     const card = delivery;
     card.getCard();
 });
+

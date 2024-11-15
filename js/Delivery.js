@@ -36,8 +36,24 @@ export default class Delivery {
         return this.divElement;
     }
 
-    // set align(option) {
+    set updateName(name){
+        if(this.textElement){
+            this.textElement.textContent = name;
+        }
+    }
 
-    // }
+    get updateName() {
+        return this.textElement;
+    }
+
+    set align(option) {
+        if(this.divElement) {
+            this.divElement.style.alignItems = option;
+        }
+    }
+
+    get align() {
+        return this.divElement.style.alignItems || '';
+    }
 }
 
