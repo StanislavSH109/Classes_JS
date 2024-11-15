@@ -6,8 +6,13 @@ const deliveryArray = [
     new Delivery('Мария', 'ул. Ткачей, д. 43', 11)
 ];
 
-deliveryArray.forEach(delivery => {
-    const card = delivery;
-    card.getCard();
-});
+const card1 = deliveryArray[0];
+card1.getCard();
+
+
+const card2 = deliveryArray[1];
+card2.getCard();
+
+const card3 = deliveryArray[2];
+card3.getCard();
 

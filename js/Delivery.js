@@ -1,4 +1,6 @@
 export default class Delivery {
+    static idCount = 1;
+
     constructor(name, adress, distance) {
         this.name = name;
         this.adress = adress;
@@ -8,6 +10,9 @@ export default class Delivery {
     getCard() {
         this.sectionElement = document.querySelector('.main-section'); 
         this.divElement = document.createElement('div');
+        this.divElement.id = `${Delivery.idCount}`;
+        Delivery.idCount++;
+
         this.divElement.classList.add('card');
         
         this.nameElement = document.createElement('h2');
@@ -31,20 +36,20 @@ export default class Delivery {
         this.divElement.append(this.nameElement);
         this.divElement.append(this.textElement);
 
-
         this.sectionElement.append(this.divElement);
         return this.divElement;
     }
 
-    set updateName(name){
-        if(this.textElement){
-            this.textElement.textContent = name;
-        }
-    }
+    // set updateName(name){
+    //     if(this.textElement){
+    //         this.cardElement = document.getElementById(`${id}`);
+    //         this.cardElement.textElement.textContent = name;
+    //     }
+    // }
 
-    get updateName() {
-        return this.textElement;
-    }
+    // get updateName() {
+    //     return this.textElement;
+    // }
 
     set align(option) {
         if(this.divElement) {
