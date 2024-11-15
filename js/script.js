@@ -6,8 +6,10 @@ const deliveryArray = [
     new Delivery('Мария', 'ул. Ткачей, д. 43', 11)
 ];
 
+
 const card1 = deliveryArray[0];
 card1.getCard();
+
 card1.updateName = 'Светлана';
 
 const card2 = deliveryArray[1];
@@ -20,3 +22,13 @@ card3.getCard();
 card3.updateName = 'Геннадий';
 card3.updateAdress = 'ул. Мира 28, д. 35';
 card3.updateDistance = 23;
+
+const arrayExamp = [
+    card1,
+    card2,
+    card3
+]
+
+arrayExamp.forEach(element => {
+    element.align = 'center';
+});
