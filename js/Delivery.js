@@ -12,28 +12,7 @@ export default class Delivery {
         this.sectionElement = document.querySelector('.main-section'); 
         this.divElement = document.createElement('div');
 
-        this.divElement.classList.add('card');
         
-        this.nameElement = document.createElement('h2');
-        this.nameTextElement = document.createElement('p');
-        this.nameElement.textContent = 'Имя';
-        this.nameTextElement.textContent = `${this.name}`
-        this.divElement.append(this.nameElement);
-        this.divElement.append(this.nameTextElement);
-       
-        this.nameElement = document.createElement('h2');
-        this.adressTextElement = document.createElement('p');
-        this.nameElement.textContent = 'Адрес';
-        this.adressTextElement.textContent = `${this.adress}`
-        this.divElement.append(this.nameElement);
-        this.divElement.append(this.adressTextElement);
-       
-        this.nameElement = document.createElement('h2');
-        this.distanceTextElement = document.createElement('p');
-        this.nameElement.textContent = 'Расстояние';
-        this.distanceTextElement.textContent = `${this.distance} км.`
-        this.divElement.append(this.nameElement);
-        this.divElement.append(this.distanceTextElement);
 
         this.sectionElement.append(this.divElement);
         return this.divElement;
