@@ -10,7 +10,7 @@ export default class Delivery {
         this.sectionElement = document.querySelector('.main-section'); 
         this.divElement = document.createElement('div');
         this.divElement.id = `${Delivery.idCount}`;
-        Delivery.idCount++;
+
 
         this.divElement.classList.add('card');
         
