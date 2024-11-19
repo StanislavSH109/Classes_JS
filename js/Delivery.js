@@ -9,8 +9,6 @@ export default class Delivery {
     getCard() {
         this.sectionElement = document.querySelector('.main-section'); 
         this.divElement = document.createElement('div');
-        this.divElement.id = `${Delivery.idCount}`;
-
 
         this.divElement.classList.add('card');
         
@@ -69,14 +67,5 @@ export default class Delivery {
         this.distanceTextElement;
     }
 
-    set align(option) {
-        if(this.divElement) {
-            this.divElement.style.alignItems = option;
-        }
-    }
-
-    get align() {
-        return this.divElement.style.alignItems || '';
-    }
 }
 
