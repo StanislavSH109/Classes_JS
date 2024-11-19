@@ -1,3 +1,5 @@
+import { createElement } from './createElement.js';
+
 export default class Delivery {
 
     constructor(name, adress, distance) {
