@@ -16,45 +16,45 @@ export default class Delivery {
         this.textNameElement = createElement('p', 'card__title-text', this.name);
         
         this.titleAddressElement = createElement('h2', 'card__title-address', 'Адрес: ');
-        this.textAdressElement = createElement('p', 'card__title-text', this.address);
+        this.textAddressElement = createElement('p', 'card__title-text', this.address);
         
         this.titleDistanceElement = createElement('h2', 'card__title-distance', 'Расстояние: ');
         this.textDistanceElement = createElement('p', 'card__title-text', `${this.distance} км.`);
 
         this.sectionElement.append(this.divElement);
-        this.divElement.append(this.titleNameElement, this.textNameElement, this.titleAddressElement, this.textAdressElement, this.titleDistanceElement, this.textDistanceElement);
+        this.divElement.append(this.titleNameElement, this.textNameElement, this.titleAddressElement, this.textAddressElement, this.titleDistanceElement, this.textDistanceElement);
         return this.divElement;
     }
 
-    // set updateName(name) {
-    //     if(this.name) {
-    //         this.nameTextElement.textContent = name;
-    //     }
-    // }
+    set updateName(name) {
+        if(this.name) {
+            this.textNameElement.textContent = name;
+        }
+    }
 
-    // get updateName() {
-    //     return this.nameTextElement;
-    // }
+    get updateName() {
+        return this.textNameElement;
+    }
 
-    // set updateAdress(adress) {
-    //     if(this.adress) {
-    //         this.adressTextElement.textContent = adress;
-    //     }
-    // }
+    set updateAddress(address) {
+        if(this.address) {
+            this.textAddressElement.textContent = address;
+        }
+    }
 
-    // get updateAdress() {
-    //     return this.adressTextElement;
-    // }
+    get updateAdress() {
+        return this.textAddressElement;
+    }
 
-    // set updateDistance(distance) {
-    //     if(this.distance){
-    //         this.distanceTextElement.textContent = `${distance} км.`;
-    //     }
-    // }
+    set updateDistance(distance) {
+        if(this.distance){
+            this.textDistanceElement.textContent = `${distance} км.`;
+        }
+    }
 
-    // get updateDistance() {
-    //     this.distanceTextElement;
-    // }
+    get updateDistance() {
+        this.textDistanceElement;
+    }
 
 }
 
