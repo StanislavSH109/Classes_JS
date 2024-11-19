@@ -19,7 +19,7 @@ card2.updateName = 'Василий';
 
 const card3 = deliveryArray[2];
 card3.getCard();
-card3.updateName = 'Геннадий';
-card3.updateAdress = 'ул. Мира 28, д. 35';
-card3.updateDistance = 23;
+// card3.updateName = 'Геннадий';
+// card3.updateAdress = 'ул. Мира 28, д. 35';
+// card3.updateDistance = 23;
 

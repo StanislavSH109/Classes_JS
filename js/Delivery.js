@@ -10,7 +10,7 @@ export default class Delivery {
 
     getCard() {
         this.sectionElement = document.querySelector('.main-section'); 
-        this.divElement = document.createElement('div');
+        this.divElement = createElement('div', 'card', '');
 
         
 
@@ -18,35 +18,35 @@ export default class Delivery {
         return this.divElement;
     }
 
-    set updateName(name) {
-        if(this.name) {
-            this.nameTextElement.textContent = name;
-        }
-    }
+    // set updateName(name) {
+    //     if(this.name) {
+    //         this.nameTextElement.textContent = name;
+    //     }
+    // }
 
-    get updateName() {
-        return this.nameTextElement;
-    }
+    // get updateName() {
+    //     return this.nameTextElement;
+    // }
 
-    set updateAdress(adress) {
-        if(this.adress) {
-            this.adressTextElement.textContent = adress;
-        }
-    }
+    // set updateAdress(adress) {
+    //     if(this.adress) {
+    //         this.adressTextElement.textContent = adress;
+    //     }
+    // }
 
-    get updateAdress() {
-        return this.adressTextElement;
-    }
+    // get updateAdress() {
+    //     return this.adressTextElement;
+    // }
 
-    set updateDistance(distance) {
-        if(this.distance){
-            this.distanceTextElement.textContent = `${distance} км.`;
-        }
-    }
+    // set updateDistance(distance) {
+    //     if(this.distance){
+    //         this.distanceTextElement.textContent = `${distance} км.`;
+    //     }
+    // }
 
-    get updateDistance() {
-        this.distanceTextElement;
-    }
+    // get updateDistance() {
+    //     this.distanceTextElement;
+    // }
 
 }
 

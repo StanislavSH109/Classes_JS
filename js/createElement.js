@@ -1,4 +1,4 @@
-const createElement = (tag, className, text = '') => {
+export const createElement = (tag, className, text = '') => {
     const element = document.createElement(tag);
     element.className = className;
     element.textContent = text;
