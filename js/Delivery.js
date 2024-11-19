@@ -1,5 +1,4 @@
 export default class Delivery {
-    static idCount = 1;
 
     constructor(name, adress, distance) {
         this.name = name;
