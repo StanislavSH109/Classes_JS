@@ -2,19 +2,27 @@ import { createElement } from './createElement.js';
 
 export default class Delivery {
 
-    constructor(name, adress, distance) {
+    constructor(name, address, distance) {
         this.name = name;
-        this.adress = adress;
+        this.address = address;
         this.distance = distance;
     }
 
     getCard() {
         this.sectionElement = document.querySelector('.main-section'); 
-        this.divElement = createElement('div', 'card', '');
-
+        this.divElement = createElement('div', 'card');
         
+        this.titleNameElement = createElement('h2', 'card__title-name', 'Имя: ');
+        this.textNameElement = createElement('p', 'card__title-text', this.name);
+        
+        this.titleAddressElement = createElement('h2', 'card__title-address', 'Адрес: ');
+        this.textAdressElement = createElement('p', 'card__title-text', this.address);
+        
+        this.titleDistanceElement = createElement('h2', 'card__title-distance', 'Расстояние: ');
+        this.textDistanceElement = createElement('p', 'card__title-text', `${this.distance} км.`);
 
         this.sectionElement.append(this.divElement);
+        this.divElement.append(this.titleNameElement, this.textNameElement, this.titleAddressElement, this.textAdressElement, this.titleDistanceElement, this.textDistanceElement);
         return this.divElement;
     }
 
