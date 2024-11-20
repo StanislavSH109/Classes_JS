@@ -5,3 +5,5 @@
 /* BLOCKS */
 
 @import 'block/card.css';
+@import 'block/form.css';
+@import 'block/modal.css';
