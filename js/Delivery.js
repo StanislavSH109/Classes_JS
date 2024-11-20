@@ -22,7 +22,15 @@ export default class Delivery {
         this.textDistanceElement = createElement('p', 'card__title-text', `${this.distance} км.`);
 
         this.sectionElement.append(this.divElement);
-        this.divElement.append(this.titleNameElement, this.textNameElement, this.titleAddressElement, this.textAddressElement, this.titleDistanceElement, this.textDistanceElement);
+        this.divElement.append(
+            this.titleNameElement, 
+            this.textNameElement, 
+            this.titleAddressElement, 
+            this.textAddressElement, 
+            this.titleDistanceElement, 
+            this.textDistanceElement
+        );
+
         return this.divElement;
     }
 
