@@ -1,7 +1,8 @@
 import Delivery from "./Delivery.js";
+import EditDelivery from "./EditDelivery.js";
 
 const deliveryArray = [
-    new Delivery('Ольга', 'ул. Вымыслов, д. 12', 8),
+    new EditDelivery('Ольга', 'ул. Вымыслов, д. 12', 8),
     new Delivery('Дмитрий', 'ул. Задачная, д. 7', 3),
     new Delivery('Мария', 'ул. Ткачей, д. 43', 11)
 ];
