@@ -50,7 +50,17 @@ export default class Delivery {
         form.querySelector('.form__input-address').value = this.address;
         form.querySelector('.form__input-distance').value = this.distance;
 
-        
+        //Сохраняем новые данные
+        const saveButton = form.querySelector('.form__btn-save');
+        saveButton.addEventListener('click', (e) {
+            e.preventDefault();
+
+            this.updateName = form.querySelector('.form__input-name').value;
+            this.updateAddress = form.querySelector('.form__input-address').value;
+            this.updateDistance = form.querySelector('.form__input-distance').value;
+
+            modal.classList.remove('modal--active');
+        });
 
     }
 
