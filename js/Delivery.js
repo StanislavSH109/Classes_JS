@@ -23,7 +23,7 @@ export default class Delivery {
 
         this.editButton = createElement('button', 'card__btn-edit', 'Изменить');
         this.editButton.addEventListener('click',  () => {
-            this.
+            this.openEditForm();
         });
         
         this.sectionElement.append(this.divElement);
@@ -38,6 +38,19 @@ export default class Delivery {
         );
 
         return this.divElement;
+    }
+
+    openEditForm() {
+        const modal = document.querySelector('.modal');
+        modal.classList.add('modal--active');
+
+        const form = document.querySelector('.form');
+        form.querySelector('.form__input-name').value = this.name;
+        form.querySelector('.form__input-address').value = this.address;
+        form.querySelector('.form__input-distance').value = this.distance;
+
+        
+
     }
 
     set updateName(name) {
