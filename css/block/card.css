@@ -26,4 +26,17 @@
     cursor: pointer;
     margin: 0 0 10px 0;
     color: white;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    font-size: 14px;
+    transition: .2s ease-in-out;
+}
+
+.card__btn-edit:hover {
+    transition: .2s ease-in;
+    background-color: rgb(75, 151, 165);
+}
+
+.card__btn-edit:active {
+    transition: .1s ease-in;
+    background-color: rgb(3, 83, 97);
 }
