@@ -44,16 +44,30 @@ export default class Delivery {
         const modal = document.querySelector('.modal');
         modal.classList.add('modal--active');
 
+        //Закрытие окна формы
+        const closeElement = document.querySelector('.modal__form-close');
+        closeElement.addEventListener('click',  () => {
+            modal.classList.remove('modal--active');
+        });
+
         //Вносим текущие данные
         const form = document.querySelector('.form');
+
+       
+
         form.querySelector('.form__input-name').value = this.name;
         form.querySelector('.form__input-address').value = this.address;
         form.querySelector('.form__input-distance').value = this.distance;
 
         //Сохраняем новые данные
         const saveButton = form.querySelector('.form__btn-save');
-        saveButton.addEventListener('click', (e) {
+        saveButton.addEventListener('click', (e) => {
             e.preventDefault();
+            
+            if(!form.checkValidity()) {
+                alert('Пожалуйста, заполните все поля формы!');
+                return;
+            }
 
             this.updateName = form.querySelector('.form__input-name').value;
             this.updateAddress = form.querySelector('.form__input-address').value;

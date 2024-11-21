@@ -11,16 +11,9 @@ const deliveryArray = [
 const card1 = deliveryArray[0];
 card1.getCard();
 
-card1.updateName = 'Светлана';
-
 const card2 = deliveryArray[1];
 card2.getCard();
-card2.updateName = 'Василий';
-
 
 const card3 = deliveryArray[2];
 card3.getCard();
-card3.updateName = 'Геннадий';
-card3.updateAddress = 'ул. Мира 28, д. 35';
-card3.updateDistance = 23;
 
