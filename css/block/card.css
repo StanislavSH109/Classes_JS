@@ -1,6 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 20px;
     height: 250px;
     width: 300px;
@@ -12,4 +13,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.card__btn-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(10, 133, 155);
+    cursor: pointer;
+    margin: 0 0 10px 0;
+    color: white;
 }

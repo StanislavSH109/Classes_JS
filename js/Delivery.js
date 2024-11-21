@@ -44,6 +44,7 @@ export default class Delivery {
         const modal = document.querySelector('.modal');
         modal.classList.add('modal--active');
 
+        //Вносим текущие данные
         const form = document.querySelector('.form');
         form.querySelector('.form__input-name').value = this.name;
         form.querySelector('.form__input-address').value = this.address;
