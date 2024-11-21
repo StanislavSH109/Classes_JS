@@ -53,8 +53,6 @@ export default class Delivery {
         //Вносим текущие данные
         const form = document.querySelector('.form');
 
-       
-
         form.querySelector('.form__input-name').value = this.name;
         form.querySelector('.form__input-address').value = this.address;
         form.querySelector('.form__input-distance').value = this.distance;
@@ -63,7 +61,7 @@ export default class Delivery {
         const saveButton = form.querySelector('.form__btn-save');
         saveButton.addEventListener('click', (e) => {
             e.preventDefault();
-            
+
             if(!form.checkValidity()) {
                 alert('Пожалуйста, заполните все поля формы!');
                 return;
