@@ -2,9 +2,9 @@ import Delivery from "./Delivery.js";
 import EditDelivery from "./EditDelivery.js";
 
 const deliveryArray = [
-    new EditDelivery('Ольга', 'ул. Вымыслов, д. 12', 8, 'Доставлен'),
-    new Delivery('Дмитрий', 'ул. Задачная, д. 7', 3),
-    new Delivery('Мария', 'ул. Ткачей, д. 43', 11)
+    new EditDelivery('Ольга', 'ул. Вымыслов, д. 12', 3, ),
+    new EditDelivery('Михаил', 'ул. Воронежская, д. 38/43', 5, 'Доставляется'),
+    new EditDelivery('Алексей', 'ул. Солнечный проезд, д. 22', 18, 'Отменён')
 ];
 
 

@@ -10,15 +10,15 @@
 }
 
 .card--delivery {
-    border: 2px solid yellow;
+    box-shadow: 0 0 5px 0 yellow;
 }
 
 .card--delivered {
-    border: 2px solid green;
+    box-shadow: 0 0 5px 0 blue;
 }
 
 .card--canceled {
-    border: 2px solid red;
+    box-shadow: 0 0 15px 0 red;
 }
 
 .card__title {

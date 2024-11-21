@@ -57,6 +57,12 @@ export default class Delivery {
         form.querySelector('.form__input-address').value = this.address;
         form.querySelector('.form__input-distance').value = this.distance;
 
+        const statusSelect = form.querySelector('#status-delivery');
+        if(this.status) {
+            statusSelect.value = this.status;
+            console.log(statusSelect);
+        }
+
         //Сохраняем новые данные
         const saveButton = form.querySelector('.form__btn-save');
         saveButton.addEventListener('click', (e) => {
@@ -70,7 +76,8 @@ export default class Delivery {
             this.updateName = form.querySelector('.form__input-name').value;
             this.updateAddress = form.querySelector('.form__input-address').value;
             this.updateDistance = form.querySelector('.form__input-distance').value;
-
+            this.updateStatus = statusSelect.value;
+            
             modal.classList.remove('modal--active');
         });
 
