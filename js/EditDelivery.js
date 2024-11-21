@@ -8,35 +8,36 @@ export default class EditDelivery extends Delivery {
 
     getCard() {
         const card = super.getCard();
-        
-        if(this.status === 'Доставляется') {
+        console.log(card);
+
+        if(this.status === 'delivery') {
             card.classList.add('card--delivery');
-        } else if (this.status === 'Доставлен') {
+        } else if (this.status === 'delivered') {
             card.classList.add('card--delivered');
-        } else if (this.status === 'Отменён') {
+        } else if (this.status === 'canceled') {
             card.classList.add('card--canceled');
         }
-        
-        console.log(this.status);
+
         return card;
     }
+
     
-    set updateStatus(status) {
-        this.status = status;
-        const card = this.divElement;
+    // set updateStatus(status) {
+    //     this.status = status;
+    //     const card = this.divElement;
 
-        card.classList.remove('card--delivery', 'card--delivered', 'card--canceled');
+    //     if(this.status === 'delivery') {
+    //         card.classList.add('card--delivery');
+    //     } else if (this.status === 'delivered') {
+    //         card.classList.add('card--delivered');
+    //     } else if (this.status === 'canceled') {
+    //         card.classList.add('card--canceled');
+    //     }
 
-        if(this.status === 'Доставляется') {
-            card.classList.add('card--delivery');
-        } else if (this.status === 'Доставлен') {
-            card.classList.add('card--delivered');
-        } else if (this.status === 'Отменён') {
-            card.classList.add('card--canceled');
-        }
-    }
+    //     return card;
+    // }
 
-    get updateStatus() {
-        return this.status;
-    }
+    // get updateStatus() {
+    //     return this.status;
+    // }
 }
