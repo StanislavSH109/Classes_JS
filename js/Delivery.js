@@ -21,8 +21,14 @@ export default class Delivery {
         this.titleDistanceElement = createElement('h2', 'card__title-distance', 'Расстояние: ');
         this.textDistanceElement = createElement('p', 'card__title-text', `${this.distance} км.`);
 
+        this.editButton = createElement('button', 'card__btn-edit', 'Изменить');
+        this.editButton.addEventListener('click',  () => {
+            this.
+        });
+        
         this.sectionElement.append(this.divElement);
         this.divElement.append(
+            this.editButton,
             this.titleNameElement, 
             this.textNameElement, 
             this.titleAddressElement, 
