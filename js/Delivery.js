@@ -56,6 +56,7 @@ export default class Delivery {
         form.querySelector('.form__input-name').value = this.name;
         form.querySelector('.form__input-address').value = this.address;
         form.querySelector('.form__input-distance').value = this.distance;
+        form.querySelector('#status-delivery').value = this.status || '';
 
         const statusSelect = form.querySelector('#status-delivery');
 
@@ -72,7 +73,16 @@ export default class Delivery {
             this.updateName = form.querySelector('.form__input-name').value;
             this.updateAddress = form.querySelector('.form__input-address').value;
             this.updateDistance = form.querySelector('.form__input-distance').value;
+            this.status = form.querySelector('#status-delivery').value;
 
+            this.divElement.classList.remove('card--delivery', 'card--delivered', 'card--canceled');
+            if (this.status === 'delivery') {
+                this.divElement.classList.add('card--delivery');
+            } else if (this.status === 'delivered') {
+                this.divElement.classList.add('card--delivered');
+            } else if (this.status === 'canceled') {
+                this.divElement.classList.add('card--canceled');
+            }
 
             modal.classList.remove('modal--active');
         });
