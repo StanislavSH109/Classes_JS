@@ -10,7 +10,6 @@ const deliveryArray = [
 
 const card1 = deliveryArray[0];
 card1.getCard();
-card1.updateName;
 
 const card2 = deliveryArray[1];
 card2.getCard();

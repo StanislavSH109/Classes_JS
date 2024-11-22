@@ -20,22 +20,4 @@ export default class EditDelivery extends Delivery {
         return card;
     }
 
-    // set updateStatus(status) {
-    //     const selectStatus = document.querySelector('#status-delivery');
-        
-
-    //     if(this.status === 'delivery') {
-    //         card.classList.add('card--delivery');
-    //     } else if (this.status === 'delivered') {
-    //         card.classList.add('card--delivered');
-    //     } else if (this.status === 'canceled') {
-    //         card.classList.add('card--canceled');
-    //     }
-
-    //     return card;
-    // }
-
-    // get updateStatus() {
-    //     return this.status;
-    // }
 }
