@@ -2,7 +2,7 @@ import Delivery from "./Delivery.js";
 import EditDelivery from "./EditDelivery.js";
 
 const deliveryArray = [
-    new EditDelivery('Ольга', 'ул. Вымыслов, д. 12', 3),
+    new Delivery('', ''),
     new EditDelivery('Михаил', 'ул. Воронежская, д. 38/43', 5),
     new EditDelivery('Алексей', 'ул. Солнечный проезд, д. 22', 18)
 ];
@@ -10,6 +10,7 @@ const deliveryArray = [
 
 const card1 = deliveryArray[0];
 card1.getCard();
+card1.updateName;
 
 const card2 = deliveryArray[1];
 card2.getCard();

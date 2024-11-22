@@ -69,10 +69,10 @@ export default class Delivery {
                 return;
             }
 
-            this.updateName = form.querySelector('.form__input-name').value;
-            this.updateAddress = form.querySelector('.form__input-address').value;
-            this.updateDistance = form.querySelector('.form__input-distance').value;
-            this.updateStatus = this.status;
+            this.updateName.textContent = form.querySelector('.form__input-name').value;
+            this.updateAddress.textContent = form.querySelector('.form__input-address').value;
+            this.updateDistance.textContent = form.querySelector('.form__input-distance').value;
+
 
             modal.classList.remove('modal--active');
         });
@@ -86,27 +86,25 @@ export default class Delivery {
     }
 
     get updateName() {
-        return this.textNameElement;
+        return this.name;
     }
 
     set updateAddress(address) {
-        if(this.address) {
-            this.textAddressElement.textContent = address;
-        }
+        this.address = address;
+        this.textAddressElement = address;
     }
 
-    get updateAdress() {
-        return this.textAddressElement;
+    get updateAddress() {
+        return this.address;
     }
 
     set updateDistance(distance) {
-        if(this.distance){
-            this.textDistanceElement.textContent = `${distance} км.`;
-        }
+        this.distance = distance;
+        this.textDistanceElement = `${distance} км.`
     }
 
     get updateDistance() {
-        this.textDistanceElement;
+       return this.distance;
     }
 
 }

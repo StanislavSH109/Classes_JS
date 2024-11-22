@@ -21,15 +21,15 @@
                         </div>
                         <h2 class="modal__form-title">Изменить</h2>
                         <form class="form" action="" method="post">
-                            <input class="form__input-name" type="text" placeholder="Имя">
-                            <input class="form__input-address" type="text" placeholder="Адрес">
-                            <input class="form__input-distance" type="number" placeholder="Расстояние">
+                            <input class="form__input-name" type="text" placeholder="Имя" required>
+                            <input class="form__input-address" type="text" placeholder="Адрес" required>
+                            <input class="form__input-distance" type="number" placeholder="Расстояние" required>
                             <select id="status-delivery">
                                 <option value="canceled">Отменён</option>
                                 <option value="delivered">Доставлен</option>
                                 <option value="delivery">Доставляется</option>
                             </select>
-                            <button class="form__btn-save">Сохранить</button>
+                            <button class="form__btn-save" type="submit">Сохранить</button>
                         </form>
                     </div>
                 </div>
