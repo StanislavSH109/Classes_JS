@@ -18,7 +18,8 @@
 }
 
 .card--canceled {
-    box-shadow: 0 0 15px 0 red;
+    opacity: 0.4;
+    background-color: rgb(182, 172, 172);
 }
 
 .card__title {
