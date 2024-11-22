@@ -1,5 +1,6 @@
 import { createElement } from './createElement.js';
 
+
 export default class Delivery {
 
     constructor(name, address, distance) {
@@ -37,7 +38,21 @@ export default class Delivery {
             this.textDistanceElement
         );
 
+        this.updateStatusCard();
+
         return this.divElement;
+    }
+
+    updateStatusCard() {
+        this.divElement.classList.remove('card--delivery', 'card--delivered', 'card--canceled');
+    
+        if (this.status === 'delivery') {
+            this.divElement.classList.add('card--delivery');
+        } else if (this.status === 'delivered') {
+            this.divElement.classList.add('card--delivered');
+        } else if (this.status === 'canceled') {
+            this.divElement.classList.add('card--canceled');
+        }
     }
 
     openEditForm() {
@@ -75,19 +90,14 @@ export default class Delivery {
             this.updateDistance = form.querySelector('.form__input-distance').value;
             this.status = form.querySelector('#status-delivery').value;
 
-            this.divElement.classList.remove('card--delivery', 'card--delivered', 'card--canceled');
-            if (this.status === 'delivery') {
-                this.divElement.classList.add('card--delivery');
-            } else if (this.status === 'delivered') {
-                this.divElement.classList.add('card--delivered');
-            } else if (this.status === 'canceled') {
-                this.divElement.classList.add('card--canceled');
-            }
-
+            this.updateStatusCard();
             modal.classList.remove('modal--active');
         });
 
     }
+
+    
+    
 
     set updateName(name) {
         this.name = name;
