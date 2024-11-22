@@ -72,7 +72,8 @@ export default class Delivery {
             this.updateName = form.querySelector('.form__input-name').value;
             this.updateAddress = form.querySelector('.form__input-address').value;
             this.updateDistance = form.querySelector('.form__input-distance').value;
-            
+            this.updateStatus = this.status;
+
             modal.classList.remove('modal--active');
         });
 

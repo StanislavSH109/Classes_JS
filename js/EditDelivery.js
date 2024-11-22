@@ -7,8 +7,7 @@ export default class EditDelivery extends Delivery {
     }
 
     getCard() {
-        const card = super.getCard();
-        console.log(card);
+        const card = super.getCard(); 
 
         if(this.status === 'delivery') {
             card.classList.add('card--delivery');
@@ -21,23 +20,22 @@ export default class EditDelivery extends Delivery {
         return card;
     }
 
-    
-    // set updateStatus(status) {
-    //     this.status = status;
-    //     const card = this.divElement;
+    set updateStatus(status) {
+        const selectStatus = document.querySelector('#status-delivery');
+        
 
-    //     if(this.status === 'delivery') {
-    //         card.classList.add('card--delivery');
-    //     } else if (this.status === 'delivered') {
-    //         card.classList.add('card--delivered');
-    //     } else if (this.status === 'canceled') {
-    //         card.classList.add('card--canceled');
-    //     }
+        if(this.status === 'delivery') {
+            card.classList.add('card--delivery');
+        } else if (this.status === 'delivered') {
+            card.classList.add('card--delivered');
+        } else if (this.status === 'canceled') {
+            card.classList.add('card--canceled');
+        }
 
-    //     return card;
-    // }
+        return card;
+    }
 
-    // get updateStatus() {
-    //     return this.status;
-    // }
+    get updateStatus() {
+        return this.status;
+    }
 }
