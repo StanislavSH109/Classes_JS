@@ -7,11 +7,14 @@ export default class Delivery {
         this.name = name;
         this.address = address;
         this.distance = distance;
+        this.id = `card-${Math.floor(Math.random() * 10) +1}`;
+
     }
 
     getCard() {
         this.sectionElement = document.querySelector('.main-section'); 
         this.divElement = createElement('div', 'card');
+        this.divElement.id = this.id;
         
         this.titleNameElement = createElement('h2', 'card__title-name', 'Имя: ');
         this.textNameElement = createElement('p', 'card__title-text', this.name);
@@ -24,7 +27,7 @@ export default class Delivery {
 
         this.editButton = createElement('button', 'card__btn-edit', 'Изменить');
         this.editButton.addEventListener('click',  () => {
-            this.openEditForm();
+            this.openEditForm(this.id);
         });
         
         this.sectionElement.append(this.divElement);
@@ -55,7 +58,7 @@ export default class Delivery {
         }
     }
 
-    openEditForm() {
+    openEditForm(cardId) {
         const modal = document.querySelector('.modal');
         modal.classList.add('modal--active');
 
@@ -73,11 +76,13 @@ export default class Delivery {
         form.querySelector('.form__input-distance').value = this.distance;
         form.querySelector('#status-delivery').value = this.status || '';
 
-        const statusSelect = form.querySelector('#status-delivery');
-
         //Сохраняем новые данные
         const saveButton = form.querySelector('.form__btn-save');
-        saveButton.addEventListener('click', (e) => {
+        saveButton.replaceWith(saveButton.cloneNode(true))
+
+        const newSaveButton = form.querySelector('.form__btn-save');
+
+        newSaveButton.addEventListener('click', (e) => {
             e.preventDefault();
 
             if(!form.checkValidity()) {
@@ -85,19 +90,21 @@ export default class Delivery {
                 return;
             }
 
-            this.updateName = form.querySelector('.form__input-name').value;
-            this.updateAddress = form.querySelector('.form__input-address').value;
-            this.updateDistance = form.querySelector('.form__input-distance').value;
-            this.status = form.querySelector('#status-delivery').value;
+            const cardElement = document.getElementById(cardId);
+            console.log(cardElement);
 
+            if(cardElement) {
+                this.updateName = form.querySelector('.form__input-name').value;
+                this.updateAddress = form.querySelector('.form__input-address').value;
+                this.updateDistance = form.querySelector('.form__input-distance').value;
+                this.status = form.querySelector('#status-delivery').value;
+            }
+            
             this.updateStatusCard();
             modal.classList.remove('modal--active');
         });
 
     }
-
-    
-    
 
     set updateName(name) {
         this.name = name;
