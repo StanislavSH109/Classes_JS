@@ -9,14 +9,6 @@ body {
     padding: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
 p {
     font-size: 18px;
     line-height: 24px;
@@ -56,22 +48,4 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
-}
-
-.btn__full-distance {
-    font-family: inherit;
-    font-size: 18px;
-    padding: 16px 32px;
-    background-color: rgb(13, 13, 255);
-    text-align: center;
-    width: 300px;
-    color: antiquewhite;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: .2s ease-in-out;
-}
-
-.btn__full-distance:hover {
-    transition: .2s ease-in;
-    background-color: rgb(64, 64, 236);
 }

@@ -1,4 +1,5 @@
 import EditDelivery from "./EditDelivery.js";
+import { createFullDistance } from "./createFullDistance.js";
 
 const deliveryArray = [
     new EditDelivery('Ольга', 'ул. Вершителе д. 23', 3, 'canceled'),
@@ -10,5 +11,11 @@ deliveryArray.forEach(delivery => {
     delivery.getCard();
 });
 
-const totalDistance = EditDelivery.getTotalDistance(deliveryArray);
-console.log(totalDistance);
+
+const buttonFullDistance = document.querySelector('.full-distance__btn');
+buttonFullDistance.addEventListener('click',  () => {
+    const totalDistance = EditDelivery.getTotalDistance(deliveryArray);
+    const result = createFullDistance('p', totalDistance);
+
+    return result;
+});

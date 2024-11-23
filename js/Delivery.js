@@ -128,5 +128,6 @@ export default class Delivery {
        return this.distance;
     }
 
+
 }
 
