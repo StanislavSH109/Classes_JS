@@ -1,4 +1,3 @@
-import Delivery from "./Delivery.js";
 import EditDelivery from "./EditDelivery.js";
 
 const deliveryArray = [
