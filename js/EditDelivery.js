@@ -8,14 +8,7 @@ export default class EditDelivery extends Delivery {
 
     getCard() {
         const card = super.getCard(); 
-
-        if(this.status === 'delivery') {
-            card.classList.add('card--delivery');
-        } else if (this.status === 'delivered') {
-            card.classList.add('card--delivered');
-        } else if (this.status === 'canceled') {
-            card.classList.add('card--canceled');
-        }
+        card.classList.add(`card--${this.status}`)
 
         return card;
     }
