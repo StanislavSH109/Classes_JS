@@ -13,4 +13,8 @@ export default class EditDelivery extends Delivery {
         return card;
     }
 
+    static getTotalDistance(arr) {
+        
+    }
+
 }

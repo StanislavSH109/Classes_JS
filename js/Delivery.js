@@ -8,7 +8,6 @@ export default class Delivery {
         this.address = address;
         this.distance = distance;
         
-
     }
 
     getCard() {
