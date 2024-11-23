@@ -67,4 +67,11 @@ p {
     width: 300px;
     color: antiquewhite;
     border-radius: 8px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn__full-distance:hover {
+    transition: .2s ease-in;
+    background-color: rgb(64, 64, 236);
 }

@@ -14,7 +14,11 @@ export default class EditDelivery extends Delivery {
     }
 
     static getTotalDistance(arr) {
-        
+        return arr.reduce((acc, currentValue) => {
+            if(currentValue.status !== 'canceled') {
+                return acc + currentValue.distance;
+            }
+            return acc;
+        }, 0); 
     }
-
 }

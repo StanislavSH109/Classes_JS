@@ -9,3 +9,6 @@ const deliveryArray = [
 deliveryArray.forEach(delivery => {
     delivery.getCard();
 });
+
+const totalDistance = EditDelivery.getTotalDistance(deliveryArray);
+console.log(totalDistance);
