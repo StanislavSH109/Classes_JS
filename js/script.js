@@ -12,10 +12,15 @@ deliveryArray.forEach(delivery => {
 });
 
 
+//Сделал флаг, чтобы при многократном нажатии, не выводилось несколько раз расстояние.
+let isDistanceShow = false;
+
 const buttonFullDistance = document.querySelector('.full-distance__btn');
 buttonFullDistance.addEventListener('click',  () => {
+    if(isDistanceShow) return;
+
     const totalDistance = EditDelivery.getTotalDistance(deliveryArray);
     const result = createFullDistance('p', totalDistance);
+    isDistanceShow = true;
 
-    return result;
 });
